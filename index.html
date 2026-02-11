@@ -9,158 +9,50 @@
       margin: 0;
       min-height: 100vh;
       background-image: url("背景.png");
-      background-size: cover; /* 画面いっぱい */
-      background-position: center top; /* スマホで中央を基準 */
+      background-size: cover;
+      background-position: center top;
       background-repeat: no-repeat;
       font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
     }
-    .logo {
+
+    /* 重ね配置の土台 */
+    .stack {
+      position: relative;
       width: 100%;
-      display: flex;
-      justify-content: center;
+      max-width: 375px; /* スマホ基準 */
+      margin: 0 auto;
       padding-top: 16px;
     }
-    .logo img {
-      width: 100%;
-      max-width: 360px; /* 画像側で位置調整している前提 */
+
+    /* すべて同じ上基準で重ねる */
+    .layer {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
       height: auto;
+      pointer-events: auto;
     }
-    .qr {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-top: 24px;
-    }
-    .qr img {
-      width: 100%;
-      max-width: 320px; /* 完成イメージ基準 */
-      height: auto;
-    }
-      .top-button {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-top: 24px;
-    }
-    .top-button img {
-      width: 100%;
-      max-width: 320px; /* 素材基準 */
-      height: auto;
-    }
-      .top-button {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-top: 24px;
-    }
-    .top-button img {
-      width: 100%;
-      max-width: 320px;
-      height: auto;
-    }
-    .button-frame {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-top: 24px;
-    }
-    .button-frame img {
-      width: 100%;
-      max-width: 320px; /* 素材そのまま */
-      height: auto;
-    }
-      .unknown {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-top: 16px;
-    }
-    .unknown img {
-      width: 100%;
-      max-width: 260px; /* 素材基準 */
-      height: auto;
-    }
-      .unknown {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-top: 16px;
-    }
-    .unknown img {
-      width: 100%;
-      max-width: 260px;
-      height: auto;
-    }
-    .add-id {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-top: 16px;
-    }
-    .add-id img {
-      width: 100%;
-      max-width: 260px; /* 素材基準 */
-      height: auto;
-    }
-      .add-qr {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-top: 16px;
-    }
-    .add-qr img {
-      width: 100%;
-      max-width: 260px; /* 素材基準 */
-      height: auto;
-    }
+
+    .logo { max-width: 360px; }
+    .qr { max-width: 320px; }
+    .top-btn { max-width: 320px; }
+    .frame { max-width: 320px; }
+    .unknown { max-width: 260px; }
+    .add-id { max-width: 260px; }
+    .add-qr { max-width: 260px; }
   </style>
 </head>
 <body>
-  <div class="logo">
-    <img src="立川女学園ロゴ.png" alt="立川女学園 ロゴ">
+  <!-- 重ね配置用コンテナ -->
+  <div class="stack">
+    <img class="layer logo" src="立川女学園ロゴ.png" alt="立川女学園 ロゴ">
+    <img class="layer qr" src="QRコード.png" alt="LINE QRコード">
+    <img class="layer top-btn" src="トップに戻るボタン.png" alt="トップに戻る">
+    <img class="layer frame" src="ボタン枠.png" alt="ボタン枠">
+    <img class="layer unknown" src="分からない方.png" alt="追加方法がわからない方">
+    <img class="layer add-id" src="追加方法ID.png" alt="ID追加方法">
+    <img class="layer add-qr" src="追加方法QR.png" alt="QR追加方法">
   </div>
-
-  <!-- QRコード -->
-  <div class="qr">
-    <img src="QRコード.png" alt="LINE QRコード">
-  </div>
-
-  <!-- トップに戻るボタン -->
-  <div class="top-button">
-    <img src="トップに戻るボタン.png" alt="トップに戻る">
-  </div>
-
-  <!-- ボタン枠 -->
-  <div class="button-frame">
-    <img src="ボタン枠.png" alt="ボタン枠">
-  </div>
-
-  <!-- 分からない方 -->
-  <div class="unknown">
-    <img src="分からない方.png" alt="追加方法がわからない方">
-  </div>
-
-  <!-- 追加方法ID -->
-  <div class="add-id">
-    <img src="追加方法ID.png" alt="ID追加方法">
-  </div>
-
-  <!-- 追加方法QR -->
-  <div class="add-qr">
-    <img src="追加方法QR.png" alt="QR追加方法">
-  </div>
-
-  <!-- ここから新しい求人ページを組み立てます -->
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>求人ページ 制作中</title>
-</head>
-<body>
-  <!-- ここから新しい求人ページを組み立てます -->
 </body>
 </html>
