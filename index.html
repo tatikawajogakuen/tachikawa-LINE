@@ -36,22 +36,8 @@
 
     .logo { max-width: 400px; }
     .qr { max-width: 400px; }
-    .top-btn {
-      max-width: 400px;
-      top: 520px; /* ★表示位置 */
-    }
-
-    /* 透明クリックエリア */
-    .hit-area {
-      position: absolute;
-      top: 520px;          /* top-btn と同じ */
-      left: 50%;
-      transform: translateX(-50%);
-      width: 400px;        /* ボタン画像と同じ幅 */
-      height: 80px;        /* ボタンの高さに合わせる */
-      background: transparent;
-      z-index: 10;         /* 画像より前面 */
-    }
+    .top-btn { max-width: 400px; z-index: 3; }
+    .job-btn { max-width: 400px; z-index: 5; }
     .frame { max-width: 420px; }
     .unknown { max-width: 420px; }
     .add-id { max-width: 420px; }
@@ -63,9 +49,10 @@
   <div class="stack">
     <img class="layer logo" src="立川女学園ロゴ.png" alt="立川女学園 ロゴ">
     <img class="layer qr" src="QRコード.png" alt="LINE QRコード">
+    <a class="layer job-btn" href="https://tatikawajogakuen.github.io/tachikawa-job/" aria-label="求人トップへ">
+      <img src="トップに戻るボタン.png" alt="求人TOPへ">
+    </a>
     <img class="layer top-btn" src="トップに戻るボタン.png" alt="トップに戻る">
-    <!-- 透明クリックエリア -->
-    <a href="https://tatikawajogakuen.github.io/tachikawa-job/" class="hit-area" aria-label="トップ画面に戻る"></a>
     <img class="layer frame" src="ボタン枠.png" alt="ボタン枠">
     <img class="layer unknown" src="分からない方.png" alt="追加方法がわからない方">
     <img class="layer add-id" src="追加方法ID.png" alt="ID追加方法">
